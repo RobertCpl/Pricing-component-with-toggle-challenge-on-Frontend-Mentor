@@ -1,0 +1,199 @@
+/* The switch - the box around the slider */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #030609;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+@media screen and (min-width: 990px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: hsl(233deg, 13%, 49%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: hsl(240deg, 78%, 98%);
+  background-image: url(/images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: top -50px right -200px;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    justify-content: space-around;
+    background-position: top right;
+  }
+}
+.container main {
+  width: 100%;
+}
+.container .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.container .header .main_heading {
+  padding: 2rem;
+}
+.container .header .switch_box {
+  min-width: 24rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.card__box {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .card__box {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.card__box .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 19rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+.card__box .card .card__titel {
+  font-size: 1rem;
+}
+.card__box .card .card__price {
+  display: none;
+  width: 100%;
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 1.5rem 0 1.5rem 0;
+  border-bottom: 1px solid hsl(234deg, 14%, 74%);
+}
+.card__box .card .active {
+  display: block;
+}
+.card__box .card .card__adventage {
+  width: 100%;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__box .card .card__adventage span {
+  text-align: center;
+  width: 100%;
+  padding: 0.7rem 0 0.7rem 0;
+  border-bottom: 1px solid hsl(234deg, 14%, 74%);
+}
+.card__box .card .card__btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: hsl(240deg, 78%, 98%);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(to right, hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+}
+.card__box .card:hover {
+  color: hsl(240deg, 78%, 98%);
+  background: linear-gradient(to right, hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+  transition: transform 0.5s;
+}
+.card__box .card:hover .card__btn {
+  color: hsl(237deg, 63%, 64%);
+  background: hsl(240deg, 78%, 98%);
+}
+@media screen and (min-width: 1200px) {
+  .card__box .card:hover {
+    transform: scale(1.2);
+  }
+}/*# sourceMappingURL=style.css.map */
